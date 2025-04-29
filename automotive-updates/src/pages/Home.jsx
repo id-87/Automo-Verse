@@ -7,12 +7,14 @@ const fakeNews = [
     title: 'New Electric SUV Unveiled',
     content: 'A leading brand unveiled an electric SUV with a 400-mile range.',
     created: '2025-04-28',
+    image: 'https://via.placeholder.com/300x200?text=Electric+SUV',
   },
   {
     id: 2,
     title: 'Autonomous Driving Breakthrough',
     content: 'New AI tech promises level 5 autonomy by 2027.',
     created: '2025-04-27',
+    image: 'https://via.placeholder.com/300x200?text=Autonomous+Car',
   },
 ];
 
@@ -43,36 +45,40 @@ function Home({ user }) {
 
   return (
     <div>
-      {error && <Alert variant="danger">{error}</Alert>}
-      <h2>Latest Automotive News</h2>
-      <div className="mb-4">
+      {error && <Alert variant="danger" className="rounded-3">{error}</Alert>}
+      <h2 className="mb-4 text-primary fw-bold">Latest Automotive News</h2>
+      <div className="row mb-5">
         {fakeNews.map((item) => (
-          <Card key={item.id} className="mb-3">
-            <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.content}</Card.Text>
-              <Card.Footer className="text-muted">
-                Posted on {item.created}
-              </Card.Footer>
-            </Card.Body>
-          </Card>
+          <div key={item.id} className="col-md-6 mb-4">
+            <Card className="border-0 shadow-sm rounded-3 h-100 transition-hover">
+              <Card.Img variant="top" src={item.image} alt={item.title} className="rounded-top" />
+              <Card.Body>
+                <Card.Title className="fw-bold">{item.title}</Card.Title>
+                <Card.Text>{item.content}</Card.Text>
+                <Card.Footer className="text-muted small bg-transparent border-0">
+                  Posted on {item.created}
+                </Card.Footer>
+              </Card.Body>
+            </Card>
+          </div>
         ))}
       </div>
-      <h2>User Expectations</h2>
+      <h2 className="mb-4 text-primary fw-bold">User Expectations</h2>
       {user && (
-        <Form onSubmit={handlePost} className="mb-4">
+        <Form onSubmit={handlePost} className="mb-5 p-4 bg-light rounded-3 shadow-sm">
           <Form.Group className="mb-3">
-            <Form.Label>Brand</Form.Label>
+            <Form.Label className="fw-semibold">Brand</Form.Label>
             <Form.Control
               type="text"
               value={brand}
               onChange={(e) => setBrand(e.target.value)}
               placeholder="Enter brand name"
               required
+              className="rounded-3"
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Expectation</Form.Label>
+            <Form.Label className="fw-semibold">Expectation</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
@@ -80,24 +86,27 @@ function Home({ user }) {
               onChange={(e) => setExpectation(e.target.value)}
               placeholder="What do you expect from this brand?"
               required
+              className="rounded-3"
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" className="px-4 rounded-3">
             Post Expectation
           </Button>
         </Form>
       )}
-      <ListGroup>
+      <div className="row">
         {posts.map((post) => (
-          <ListGroup.Item key={post.id}>
-            <strong>{post.brand}</strong>: {post.expectation}
-            <br />
-            <small>
-              Posted by {post.email} on {post.created}
-            </small>
-          </ListGroup.Item>
+          <div key={post.id} className="col-md-4 mb-3">
+            <ListGroup.Item className="border-0 shadow-sm rounded-3 p-3 transition-hover">
+              <strong className="text-primary">{post.brand}</strong>: {post.expectation}
+              <br />
+              <small className="text-muted">
+                Posted by {post.email} on {post.created}
+              </small>
+            </ListGroup.Item>
+          </div>
         ))}
-      </ListGroup>
+      </div>
     </div>
   );
 }

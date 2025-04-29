@@ -68,6 +68,33 @@ button:focus-visible {
 } */
 
 
-body {
+/* body {
   font-family: Arial, sans-serif;
+} */
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.transition-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transition-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary:hover {
+  background-color: #0052cc;
+  border-color: #0052cc;
+}
+
+@media (max-width: 767px) {
+  .w-md-50 {
+    width: 100% !important;
+  }
 }

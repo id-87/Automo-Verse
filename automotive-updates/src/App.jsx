@@ -21,28 +21,28 @@ function App() {
 
   return (
     <div>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg" className="mb-4 shadow-sm">
         <Container>
-          <Navbar.Brand as={Link} to="/">Automotive Updates</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">Automotive Updates</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {user ? (
                 <>
-                  <Nav.Link disabled>Welcome, {user.email}</Nav.Link>
-                  <Button variant="outline-light" onClick={logout}>Logout</Button>
+                  <Nav.Link disabled className="text-light">Welcome, {user.email}</Nav.Link>
+                  <Button variant="outline-warning" onClick={logout} className="ms-2">Logout</Button>
                 </>
               ) : (
                 <>
-                  <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                  <Nav.Link as={Link} to="/signup">Signup</Nav.Link>
+                  <Nav.Link as={Link} to="/login" className="text-light">Login</Nav.Link>
+                  <Nav.Link as={Link} to="/signup" className="text-light">Signup</Nav.Link>
                 </>
               )}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container className="mt-4">
+      <Container>
         <Routes>
           <Route path="/" element={<Home user={user} />} />
           <Route path="/login" element={<Login login={login} />} />

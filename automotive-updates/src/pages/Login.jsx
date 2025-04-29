@@ -12,36 +12,37 @@ function Login({ login }) {
       setError('Please enter email and password');
       return;
     }
-    // Simulate login
     login(email);
   };
 
   return (
-    <div className="w-50 mx-auto">
-      <h2>Login</h2>
-      {error && <Alert variant="danger">{error}</Alert>}
+    <div className="w-100 w-md-50 mx-auto p-4 bg-light rounded-3 shadow-sm">
+      <h2 className="mb-4 text-primary fw-bold">Login</h2>
+      {error && <Alert variant="danger" className="rounded-3">{error}</Alert>}
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="fw-semibold">Email</Form.Label>
           <Form.Control
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"
             required
+            className="rounded-3"
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="fw-semibold">Password</Form.Label>
           <Form.Control
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password"
             required
+            className="rounded-3"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="w-100 rounded-3">
           Login
         </Button>
       </Form>
