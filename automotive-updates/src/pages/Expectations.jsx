@@ -31,9 +31,9 @@ function Expectations({ user }) {
       {error && <Alert variant="danger" className="rounded-3">{error}</Alert>}
       <h2 className="mb-4 text-primary fw-bold">User Expectations</h2>
       {user && (
-        <Form onSubmit={handlePost} className="mb-5 p-4 bg-light rounded-3 shadow-sm">
+        <Form onSubmit={handlePost} className="mb-5 p-4 bg-dark rounded-3 shadow-sm">
           <Form.Group className="mb-3">
-            <Form.Label className="fw-semibold">Brand</Form.Label>
+            <Form.Label className="fw-semibold text-danger">Brand</Form.Label>
             <Form.Control
               type="text"
               value={brand}
@@ -44,7 +44,7 @@ function Expectations({ user }) {
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label className="fw-semibold">Expectation</Form.Label>
+            <Form.Label className="fw-semibold text-danger">Expectation</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
@@ -63,8 +63,8 @@ function Expectations({ user }) {
       <Row>
         {posts.map((post) => (
           <Col key={post.id} md={4} className="mb-3">
-            <ListGroup.Item className="border-0 shadow-sm rounded-3 p-3 transition-hover">
-              <strong className="text-primary">{post.brand}</strong>: {post.expectation}
+            <ListGroup.Item className="border-0 shadow-sm rounded-3 p-3 transition-hover bg-dark">
+              <strong className="text-primary">{post.brand}</strong>: <span className="text-light">{post.expectation}</span>
               <br />
               <small className="text-muted">
                 Posted by {post.email} on {post.created}

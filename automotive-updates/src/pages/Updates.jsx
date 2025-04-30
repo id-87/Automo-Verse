@@ -6,14 +6,14 @@ const fakeNews = [
     title: 'New Electric SUV Unveiled',
     content: 'A leading brand unveiled an electric SUV with a 400-mile range.',
     created: '2025-04-28',
-    image: 'https://via.placeholder.com/300x200?text=Electric+SUV',
+    image: 'https://images.pexels.com/photos/1719648/pexels-photo-1719648.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
   },
   {
     id: 2,
     title: 'Autonomous Driving Breakthrough',
     content: 'New AI tech promises level 5 autonomy by 2027.',
     created: '2025-04-27',
-    image: 'https://via.placeholder.com/300x200?text=Autonomous+Car',
+    image: 'https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
   },
 ];
 
@@ -25,10 +25,10 @@ function Updates() {
         {fakeNews.map((item) => (
           <Col key={item.id} md={6} className="mb-4">
             <Card className="border-0 shadow-sm rounded-3 h-100 transition-hover">
-              <Card.Img variant="top" src={item.image} alt={item.title} className="rounded-top" />
+              <Card.Img variant="top" src={item.image} alt={item.title} className="rounded-top" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found')} />
               <Card.Body>
-                <Card.Title className="fw-bold">{item.title}</Card.Title>
-                <Card.Text>{item.content}</Card.Text>
+                <Card.Title className="fw-bold text-primary">{item.title}</Card.Title>
+                <Card.Text className="text-light">{item.content}</Card.Text>
                 <Card.Footer className="text-muted small bg-transparent border-0">
                   Posted on {item.created}
                 </Card.Footer>

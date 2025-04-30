@@ -17,12 +17,12 @@ function Signup({ login }) {
   };
 
   return (
-    <div className="w-100 w-md-50 mx-auto p-4 bg-light rounded-3 shadow-sm">
+    <div className="w-100 w-md-50 mx-auto p-4 bg-dark rounded-3 shadow-sm">
       <h2 className="mb-4 text-primary fw-bold">Signup</h2>
       {error && <Alert variant="danger" className="rounded-3">{error}</Alert>}
       <Form onSubmit={handleSignup}>
         <Form.Group className="mb-3">
-          <Form.Label className="fw-semibold">Email</Form.Label>
+          <Form.Label className="fw-semibold text-danger">Email</Form.Label>
           <Form.Control
             type="email"
             value={email}
@@ -33,7 +33,7 @@ function Signup({ login }) {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label className="fw-semibold">Password</Form.Label>
+          <Form.Label className="fw-semibold text-danger">Password</Form.Label>
           <Form.Control
             type="password"
             value={password}
@@ -44,7 +44,7 @@ function Signup({ login }) {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label className="fw-semibold">Confirm Password</Form.Label>
+          <Form.Label className="fw-semibold text-danger">Confirm Password</Form.Label>
           <Form.Control
             type="password"
             value={passwordConfirm}
