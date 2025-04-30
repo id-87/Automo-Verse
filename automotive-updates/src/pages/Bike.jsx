@@ -8,7 +8,13 @@ const bikeData = [
     brand: 'Royal Enfield',
     launchDate: '2024-08-15',
     description: 'A stylish retro bike with a 349cc engine, known for its urban appeal and smooth ride.',
-    image: 'https://images.pexels.com/photos/14228829/pexels-photo-14228829.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/95/77/90/957790fb8ca2e6d919aef171d05e4519.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '349cc', cylinders: 1 },
+    weight: 181,
+    horsepower: 20,
+    torque: 27,
+    gearbox: ['5-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'classic-350',
@@ -16,7 +22,13 @@ const bikeData = [
     brand: 'Royal Enfield',
     launchDate: '2024-09-01',
     description: 'An updated classic with improved handling and a refined 349cc engine.',
-    image: 'https://images.pexels.com/photos/14320756/pexels-photo-14320756.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/a9/a9/48/a9a94883c7215143522bf2139760760d.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '349cc', cylinders: 1 },
+    weight: 195,
+    horsepower: 20,
+    torque: 27,
+    gearbox: ['5-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'mt-15-v2',
@@ -24,7 +36,13 @@ const bikeData = [
     brand: 'Yamaha',
     launchDate: '2024-07-20',
     description: 'A sporty naked bike with a 155cc engine, ideal for agile city riding.',
-    image: 'https://images.pexels.com/photos/14751235/pexels-photo-14751235.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/2b/e7/55/2be755f6de827e56e418eea170619a08.jpg',
+    engine: { type: 'Liquid-cooled Petrol', displacement: '155cc', cylinders: 1 },
+    weight: 138,
+    horsepower: 18,
+    torque: 13.9,
+    gearbox: ['6-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'meteor-350',
@@ -32,7 +50,13 @@ const bikeData = [
     brand: 'Royal Enfield',
     launchDate: '2024-06-10',
     description: 'A cruiser with a 349cc engine, built for relaxed long rides.',
-    image: 'https://images.pexels.com/photos/14320756/pexels-photo-14320756.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/01/18/e3/0118e38e7fe29a7991ca481e56afc951.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '349cc', cylinders: 1 },
+    weight: 191,
+    horsepower: 20,
+    torque: 27,
+    gearbox: ['5-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'rzr-200',
@@ -40,7 +64,13 @@ const bikeData = [
     brand: 'Yamaha',
     launchDate: '2024-05-15',
     description: 'A lightweight sport bike with a 200cc engine for quick acceleration.',
-    image: 'https://images.pexels.com/photos/14751235/pexels-photo-14751235.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/ac/49/ba/ac49ba459008a6af7424de40988187f7.jpg',
+    engine: { type: 'Liquid-cooled Petrol', displacement: '200cc', cylinders: 1 },
+    weight: 140,
+    horsepower: 20,
+    torque: 18,
+    gearbox: ['6-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'pulsar-ns200',
@@ -48,7 +78,13 @@ const bikeData = [
     brand: 'Bajaj',
     launchDate: '2024-04-20',
     description: 'A naked streetfighter with a 200cc engine, known for its aggressive styling.',
-    image: 'https://images.pexels.com/photos/14228829/pexels-photo-14228829.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/2e/20/9f/2e209f5a4352d70980b11405377c6a25.jpg',
+    engine: { type: 'Liquid-cooled Petrol', displacement: '199.5cc', cylinders: 1 },
+    weight: 156,
+    horsepower: 24,
+    torque: 18.7,
+    gearbox: ['6-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'apache-rr310',
@@ -56,7 +92,13 @@ const bikeData = [
     brand: 'TVS',
     launchDate: '2024-03-25',
     description: 'A fully-faired sport bike with a 310cc engine, designed for speed.',
-    image: 'https://images.pexels.com/photos/14751235/pexels-photo-14751235.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/a2/c0/ca/a2c0ca7bc081165a919636bc3ede8616.jpg',
+    engine: { type: 'Liquid-cooled Petrol', displacement: '312cc', cylinders: 1 },
+    weight: 174,
+    horsepower: 33,
+    torque: 27.3,
+    gearbox: ['6-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'duke-390',
@@ -64,7 +106,13 @@ const bikeData = [
     brand: 'KTM',
     launchDate: '2024-02-15',
     description: 'A high-performance naked bike with a 390cc engine.',
-    image: 'https://images.pexels.com/photos/14228829/pexels-photo-14228829.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/93/85/01/938501471730357c4d4dcca25ef7ca12.jpg',
+    engine: { type: 'Liquid-cooled Petrol', displacement: '373cc', cylinders: 1 },
+    weight: 165,
+    horsepower: 43,
+    torque: 37,
+    gearbox: ['6-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'gixxer-sf',
@@ -72,7 +120,13 @@ const bikeData = [
     brand: 'Suzuki',
     launchDate: '2024-01-10',
     description: 'A sporty faired bike with a 155cc engine, great for city rides.',
-    image: 'https://images.pexels.com/photos/14751235/pexels-photo-14751235.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/c8/a1/03/c8a103ca999b83a2fca95670cedf9a67.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '155cc', cylinders: 1 },
+    weight: 148,
+    horsepower: 13.4,
+    torque: 13.8,
+    gearbox: ['5-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'hornet-2',
@@ -80,7 +134,13 @@ const bikeData = [
     brand: 'Honda',
     launchDate: '2023-12-20',
     description: 'A muscular street bike with a 184cc engine, built for agility.',
-    image: 'https://images.pexels.com/photos/14228829/pexels-photo-14228829.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/f4/58/93/f45893a75ae39fd9d1360dd2698f4302.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '184cc', cylinders: 1 },
+    weight: 142,
+    horsepower: 17,
+    torque: 15.9,
+    gearbox: ['5-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'fzs-fi',
@@ -88,7 +148,13 @@ const bikeData = [
     brand: 'Yamaha',
     launchDate: '2023-11-15',
     description: 'A stylish commuter with a 149cc engine, known for fuel efficiency.',
-    image: 'https://images.pexels.com/photos/14751235/pexels-photo-14751235.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/21/8a/12/218a12420996868b8e16f752c49d615c.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '149cc', cylinders: 1 },
+    weight: 135,
+    horsepower: 12,
+    torque: 13.3,
+    gearbox: ['5-speed manual'],
+    fuel: ['Petrol']
   },
   {
     id: 'interceptor-650',
@@ -96,7 +162,13 @@ const bikeData = [
     brand: 'Royal Enfield',
     launchDate: '2023-10-10',
     description: 'A retro roadster with a 648cc twin-cylinder engine.',
-    image: 'https://images.pexels.com/photos/14320756/pexels-photo-14320756.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1',
+    image: 'https://i.pinimg.com/736x/c6/b8/a6/c6b8a6f2409271463cf433ded5c07def.jpg',
+    engine: { type: 'Air-cooled Petrol', displacement: '648cc', cylinders: 2 },
+    weight: 202,
+    horsepower: 47,
+    torque: 52,
+    gearbox: ['6-speed manual'],
+    fuel: ['Petrol']
   },
 ];
 
@@ -112,7 +184,7 @@ function Bike() {
     <div>
       <h2 className="mb-4 text-primary fw-bold">{bike.name}</h2>
       <Row>
-        <Col md={6}>
+        <Col md={8} className="mx-auto">
           <Card className="border-0 shadow-sm rounded-3 transition-hover">
             <Card.Img src={bike.image} alt={bike.name} className="rounded-top" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found')} />
             <Card.Body>
@@ -120,6 +192,12 @@ function Bike() {
               <Card.Text className="text-light"><strong>Brand:</strong> {bike.brand}</Card.Text>
               <Card.Text className="text-light"><strong>Launch Date:</strong> {bike.launchDate}</Card.Text>
               <Card.Text className="text-light"><strong>Description:</strong> {bike.description}</Card.Text>
+              <Card.Text className="text-light"><strong>Engine:</strong> {bike.engine.displacement} {bike.engine.type}, {bike.engine.cylinders} cylinder{bike.engine.cylinders > 1 ? 's' : ''}</Card.Text>
+              <Card.Text className="text-light"><strong>Weight:</strong> {bike.weight} kg</Card.Text>
+              <Card.Text className="text-light"><strong>Horsepower:</strong> {bike.horsepower} bhp</Card.Text>
+              <Card.Text className="text-light"><strong>Torque:</strong> {bike.torque} Nm</Card.Text>
+              <Card.Text className="text-light"><strong>Gearbox:</strong> {bike.gearbox.join(', ')}</Card.Text>
+              <Card.Text className="text-light"><strong>Fuel:</strong> {bike.fuel.join(', ')}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
