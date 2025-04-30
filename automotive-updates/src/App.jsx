@@ -6,6 +6,8 @@ import Updates from './pages/Updates.jsx';
 import Expectations from './pages/Expectations.jsx';
 import Bike from './pages/Bike.jsx';
 import Car from './pages/Car.jsx';
+import Bikes from './pages/Bikes.jsx';
+import Cars from './pages/Cars.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
 
@@ -27,12 +29,14 @@ function App() {
     <div>
       <Navbar bg="dark" variant="dark" expand="lg" className="mb-4 shadow-sm">
         <Container>
-          <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">Automotive Updates</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">Automo Verse</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={Link} to="/" className="text-light">Home</Nav.Link>
               <Nav.Link as={Link} to="/updates" className="text-light">Updates</Nav.Link>
+              <Nav.Link as={Link} to="/bikes" className="text-light">Bikes</Nav.Link>
+              <Nav.Link as={Link} to="/cars" className="text-light">Cars</Nav.Link>
               <Nav.Link as={Link} to="/expectations" className="text-light">Expectations</Nav.Link>
               {user ? (
                 <>
@@ -53,6 +57,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/updates" element={<Updates />} />
+          <Route path="/bikes" element={<Bikes />} />
+          <Route path="/cars" element={<Cars />} />
           <Route path="/expectations" element={<Expectations user={user} />} />
           <Route path="/bikes/:bikeId" element={<Bike />} />
           <Route path="/cars/:carId" element={<Car />} />

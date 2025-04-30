@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card, Row, Col } from 'react-bootstrap';
 
 const bikeData = [
@@ -100,32 +100,27 @@ const bikeData = [
   },
 ];
 
-function Bike() {
-  const { bikeId } = useParams();
-  const bike = bikeData.find((b) => b.id === bikeId);
-
-  if (!bike) {
-    return <div className="text-center mt-5"><h2 className="text-primary">Bike Not Found</h2></div>;
-  }
-
+function Bikes() {
   return (
     <div>
-      <h2 className="mb-4 text-primary fw-bold">{bike.name}</h2>
-      <Row>
-        <Col md={6}>
-          <Card className="border-0 shadow-sm rounded-3 transition-hover">
-            <Card.Img src={bike.image} alt={bike.name} className="rounded-top" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found')} />
-            <Card.Body>
-              <Card.Title className="fw-bold text-primary">{bike.name}</Card.Title>
-              <Card.Text className="text-light"><strong>Brand:</strong> {bike.brand}</Card.Text>
-              <Card.Text className="text-light"><strong>Launch Date:</strong> {bike.launchDate}</Card.Text>
-              <Card.Text className="text-light"><strong>Description:</strong> {bike.description}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+      <h2 className="mb-4 text-primary fw-bold">All Bikes</h2>
+      <Row className="mb-5">
+        {bikeData.map((bike) => (
+          <Col key={bike.id} md={4} className="mb-4">
+            <Card className="border-0 shadow-sm rounded-3 h-100 transition-hover">
+              <Card.Img variant="top" src={bike.image} alt={bike.name} className="rounded-top" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found')} />
+              <Card.Body>
+                <Card.Title className="fw-bold text-primary">{bike.name}</Card.Title>
+                <Card.Text className="text-light">{bike.brand}</Card.Text>
+                <Card.Text className="text-light">{bike.description}</Card.Text>
+                <Link to={`/bikes/${bike.id}`} className="btn btn-primary rounded-3">View Details</Link>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </div>
   );
 }
 
-export default Bike;
+export default Bikes;

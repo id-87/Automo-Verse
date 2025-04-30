@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card, Row, Col } from 'react-bootstrap';
 
 const carData = [
@@ -100,32 +100,27 @@ const carData = [
   },
 ];
 
-function Car() {
-  const { carId } = useParams();
-  const car = carData.find((c) => c.id === carId);
-
-  if (!car) {
-    return <div className="text-center mt-5"><h2 className="text-primary">Car Not Found</h2></div>;
-  }
-
+function Cars() {
   return (
     <div>
-      <h2 className="mb-4 text-primary fw-bold">{car.name}</h2>
-      <Row>
-        <Col md={6}>
-          <Card className="border-0 shadow-sm rounded-3 transition-hover">
-            <Card.Img src={car.image} alt={car.name} className="rounded-top" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found')} />
-            <Card.Body>
-              <Card.Title className="fw-bold text-primary">{car.name}</Card.Title>
-              <Card.Text className="text-light"><strong>Brand:</strong> {car.brand}</Card.Text>
-              <Card.Text className="text-light"><strong>Launch Date:</strong> {car.launchDate}</Card.Text>
-              <Card.Text classSpriteSheet="text-light"><strong>Description:</strong> {car.description}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+      <h2 className="mb-4 text-primary fw-bold">All Cars</h2>
+      <Row className="mb-5">
+        {carData.map((car) => (
+          <Col key={car.id} md={4} className="mb-4">
+            <Card className="border-0 shadow-sm rounded-3 h-100 transition-hover">
+              <Card.Img variant="top" src={car.image} alt={car.name} className="rounded-top" onError={(e) => (e.target.src = 'https://via.placeholder.com/300x200?text=Image+Not+Found')} />
+              <Card.Body>
+                <Card.Title className="fw-bold text-primary">{car.name}</Card.Title>
+                <Card.Text className="text-light">{car.brand}</Card.Text>
+                <Card.Text className="text-light">{car.description}</Card.Text>
+                <Link to={`/cars/${car.id}`} className="btn btn-primary rounded-3">View Details</Link>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
     </div>
   );
 }
 
-export default Car;
+export default Cars;

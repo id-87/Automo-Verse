@@ -53,7 +53,7 @@ function Home() {
   return (
     <div>
       <div className="p-5 text-center bg-dark text-white rounded-3 mb-5">
-        <h1 className="fw-bold text-primary">Welcome to Automotive Updates</h1>
+        <h1 className="fw-bold text-primary">Welcome to Automo Verse</h1>
         <p className="lead text-danger">Explore the latest in bikes and cars!</p>
       </div>
       <h2 className="mb-4 text-primary fw-bold">Popular Bikes</h2>
