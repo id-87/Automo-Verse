@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Form, Button, ListGroup, Alert, Row, Col } from 'react-bootstrap';
 
-function Expectations({ user }) {
+function Fanzone({ user }) {
   const [posts, setPosts] = useState([]);
   const [brand, setBrand] = useState('');
   const [expectation, setExpectation] = useState('');
@@ -29,7 +29,7 @@ function Expectations({ user }) {
   return (
     <div>
       {error && <Alert variant="danger" className="rounded-3">{error}</Alert>}
-      <h2 className="mb-4 text-primary fw-bold">User Expectations</h2>
+      <h2 className="mb-4 text-primary fw-bold">Fan Zone</h2>
       {user && (
         <Form onSubmit={handlePost} className="mb-5 p-4 bg-dark rounded-3 shadow-sm">
           <Form.Group className="mb-3">
@@ -44,7 +44,7 @@ function Expectations({ user }) {
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label className="fw-semibold text-danger">Expectation</Form.Label>
+            <Form.Label className="fw-semibold text-danger">Your Canvas</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
@@ -56,7 +56,7 @@ function Expectations({ user }) {
             />
           </Form.Group>
           <Button variant="primary" type="submit" className="px-4 rounded-3">
-            Post Expectation
+            Post
           </Button>
         </Form>
       )}
@@ -77,4 +77,4 @@ function Expectations({ user }) {
   );
 }
 
-export default Expectations;
+export default Fanzone;

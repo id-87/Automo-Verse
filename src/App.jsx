@@ -3,7 +3,7 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
 import Home from './pages/Home.jsx';
 import Updates from './pages/Updates.jsx';
-import Expectations from './pages/Expectations.jsx';
+import Expectations from './pages/Fanzone.jsx';
 import Bike from './pages/Bike.jsx';
 import Car from './pages/Car.jsx';
 import Bikes from './pages/Bikes.jsx';
@@ -37,7 +37,7 @@ function App() {
               <Nav.Link as={Link} to="/updates" className="text-light">Updates</Nav.Link>
               <Nav.Link as={Link} to="/bikes" className="text-light">Bikes</Nav.Link>
               <Nav.Link as={Link} to="/cars" className="text-light">Cars</Nav.Link>
-              <Nav.Link as={Link} to="/expectations" className="text-light">Expectations</Nav.Link>
+              <Nav.Link as={Link} to="/expectations" className="text-light">Fanzone</Nav.Link>
               {user ? (
                 <>
                   <Nav.Link disabled className="text-light">Welcome, {user.email}</Nav.Link>
