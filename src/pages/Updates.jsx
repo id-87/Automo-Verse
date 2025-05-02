@@ -77,94 +77,94 @@ import { Container, ListGroup } from 'react-bootstrap';
 
 const updates = [
   {
-    id: 'maruti-price-hike',
-    title: 'Maruti Suzuki Announces Price Hike Up to Rs 62,000 from April 8',
-    content: 'Maruti Suzuki, India’s largest carmaker, will increase prices across its vehicle range due to rising input costs and operational expenses.',
-    created: '2025-04-08'
+    id: 'mahindra-sml-isuzu',
+    title: 'Mahindra to Acquire 59% Stake in SML Isuzu for Rs 555 Crore',
+    content: 'Mahindra & Mahindra will buy a majority stake in SML Isuzu at a deep discount, strengthening its commercial vehicle portfolio.',
+    created: '2025-04-29'
   },
   {
-    id: 'wagonr-sales',
-    title: 'Maruti Suzuki WagonR Remains India’s Top-Selling Car for Fourth Year',
-    content: 'WagonR sold 1,98,451 units in FY25, retaining its dominance with advanced engine options and CNG variants.',
+    id: 'us-tariffs-impact',
+    title: 'US Tariffs May Erode Rs 2700-4500 Cr of Indian Auto Component Profits',
+    content: 'ICRA reports that US tariffs could significantly impact Indian auto component exporters’ earnings due to higher costs.',
+    created: '2025-04-28'
+  },
+  {
+    id: 'royal-enfield-hunter',
+    title: 'Royal Enfield Launches 2025 Hunter 350 with New Features',
+    content: 'Royal Enfield’s 2025 Hunter 350 introduces updated styling and performance enhancements, targeting urban riders.',
+    created: '2025-04-26'
+  },
+  {
+    id: 'maruti-tax-relief',
+    title: 'Maruti Chairman: Tax Relief on Small Cars Unlikely to Revive Demand',
+    content: 'Maruti Suzuki’s R C Bhargava urges government to ease taxes to boost small car sales, citing affordability issues.',
+    created: '2025-04-25'
+  },
+  {
+    id: 'electric-trucking',
+    title: 'India Mulls Incentives to Boost Electric Trucking',
+    content: 'The government is considering major subsidies to accelerate the adoption of electric commercial vehicles.',
+    created: '2025-04-25'
+  },
+  {
+    id: 'nissan-cost-cutting',
+    title: 'Nissan Cuts Non-Core Operations to Manage Costs',
+    content: 'Nissan is streamlining operations by divesting non-essential units to improve financial efficiency.',
+    created: '2025-04-29'
+  },
+  {
+    id: 'skoda-kodiaq',
+    title: 'Skoda India Aims for 150% Sales Growth with New Kodiaq SUV',
+    content: 'Skoda plans to capitalize on SUV demand with the locally-developed Kodiaq, targeting a significant market share.',
+    created: '2025-04-19'
+  },
+  {
+    id: 'mercedes-sales',
+    title: 'Mercedes-Benz India Sales Up 4% in FY25',
+    content: 'Mercedes-Benz reports steady growth, expecting an RBI rate cut to further spur luxury vehicle demand.',
     created: '2025-04-10'
   },
   {
-    id: 'bajaj-sales',
-    title: 'Bajaj Auto Reports 1% Sales Growth in March',
-    content: 'Bajaj Auto sold 3,69,823 units in March, with a 7% rise in FY25 sales to 46,50,966 units, driven by strong exports.',
-    created: '2025-04-03'
+    id: 'maruti-grand-vitara',
+    title: 'Maruti Suzuki Launches 2025 Grand Vitara with Updated Features',
+    content: 'The new Grand Vitara offers enhanced tech and styling, aiming to compete in the crowded SUV segment.',
+    created: '2025-04-08'
   },
   {
-    id: 'us-tariffs',
-    title: 'US Tariffs Have Minimal Impact on Indian Auto Exports',
-    content: 'Low export volumes to the US mean Indian passenger vehicle makers face negligible impact from new tariffs, says ICRA.',
-    created: '2025-04-03'
+    id: 'goodyear-tyres',
+    title: 'Goodyear Plans to Sell India Farm Tyres Business for Rs 2,500 Crore',
+    content: 'Goodyear is divesting its farm tyre division to focus on core passenger vehicle tyre production.',
+    created: '2025-04-22'
   },
   {
-    id: 'skoda-sales',
-    title: 'Skoda Auto India Posts Record 7,422 Units in March',
-    content: 'Skoda achieves its highest-ever monthly sales in India, driven by demand for Kushaq and Slavia models.',
-    created: '2025-04-01'
+    id: 'auto-exports',
+    title: 'Indian Auto Parts Makers Face Minimal US Tariff Impact',
+    content: 'Plants in Canada and Mexico help Indian auto component makers avoid significant losses from US tariffs.',
+    created: '2025-04-04'
   },
   {
-    id: 'hmsi-sales',
-    title: 'Honda Motorcycle Sales Up 11% in March',
-    content: 'HMSI sold 4,27,448 units in March, reflecting strong demand for scooters and motorcycles in India.',
-    created: '2025-04-03'
+    id: 'uno-minda',
+    title: 'Uno Minda Elevates Ravi Mehra as Managing Director',
+    content: 'Uno Minda restructures its leadership to drive growth in the auto component sector.',
+    created: '2025-04-30'
   },
   {
-    id: 'hero-sales',
-    title: 'Hero MotoCorp Sees 12% Sales Rise in March',
-    content: 'Hero MotoCorp reports robust sales growth, driven by new launches and strong rural demand.',
-    created: '2025-04-03'
+    id: 'tata-artifex',
+    title: 'Tata AutoComp Systems to Acquire 80% Stake in Artifex',
+    content: 'Tata AutoComp expands its global footprint with the acquisition of Artifex, enhancing its component portfolio.',
+    created: '2025-04-30'
   },
   {
-    id: 'royal-enfield',
-    title: 'Royal Enfield Sales Surge 34% in March',
-    content: 'Royal Enfield sold 1,01,021 units, boosted by the launch of the Classic 650 Twin.',
-    created: '2025-04-01'
+    id: 'safety-norms',
+    title: 'New Safety Norms for Trucks and Heavy Vehicles Proposed',
+    content: 'Nitin Gadkari announces safety ratings for commercial vehicles, similar to Bharat NCAP, to enhance road safety.',
+    created: '2025-04-24'
   },
   {
-    id: 'bmw-sales',
-    title: 'BMW India Sales Up 7% in Q1 2025',
-    content: 'BMW sold 3,914 units in Q1, with luxury models like the 7 Series and X7 driving growth.',
-    created: '2025-04-03'
-  },
-  {
-    id: 'ev-adoption',
-    title: 'Accelerating EV Adoption Key to Improving Air Quality',
-    content: 'Experts emphasize that faster electric vehicle adoption is crucial for reducing urban pollution in India.',
-    created: '2025-04-03'
-  },
-  {
-    id: 'michelin-tyres',
-    title: 'Michelin to Roll Out Locally-Produced PV Tyres in 2025',
-    content: 'Michelin plans to produce passenger vehicle tyres in Chennai, ramping up its India portfolio.',
-    created: '2025-03-30'
-  },
-  {
-    id: 'tata-acquisition',
-    title: 'Tata Autocomp to Acquire International Automotive Components',
-    content: 'Tata Autocomp strengthens its global presence with the acquisition of IAC Group Sweden.',
-    created: '2025-03-24'
-  },
-  {
-    id: 'ashok-leyland',
-    title: 'Ashok Leyland May Shut Loss-Making UK E-Bus Plant',
-    content: 'Ashok Leyland’s Switch Mobility considers closing its UK plant due to financial challenges.',
-    created: '2025-03-26'
-  },
-  {
-    id: 'wipro-cloud-car',
-    title: 'Wipro Showcases AI-Driven Cloud Car Ecosystem',
-    content: 'Wipro’s prototype in Bengaluru highlights software-defined vehicle solutions for automakers.',
-    created: '2025-03-25'
-  },
-  {
-    id: 'maruti-tracks',
-    title: 'Maruti Suzuki to Automate 12 More Driving Test Tracks',
-    content: 'Maruti partners with Uttar Pradesh to automate license test tracks, enhancing road safety.',
-    created: '2025-04-15'
+    id: 'cv-sales',
+    title: 'Commercial Vehicle Sales Aim for One Million Units',
+    content: 'The commercial vehicle sector targets a seven-year high, driven by infrastructure growth and demand.',
+    created: '2025-04-16'
   }
 ];
 
